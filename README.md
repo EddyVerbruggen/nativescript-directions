@@ -4,7 +4,7 @@
 
 1. Download a zip of this seed.
 2. `npm install -g typescript`
-3. `cd ... path/to/zip ...`
+3. `cd ... path/to/unzip/folder ...`
 2. `npm run setup`
 3. Get to work.
 
