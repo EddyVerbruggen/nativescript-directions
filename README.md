@@ -32,9 +32,9 @@ Replace `nativescript-yourplugin` with your actual plugin name.
 
 1. Make changes to plugin files
 2. Make changes in `demo` that would test those changes out
-3. `npm run demo.ios` or `npm run demo.android`  **must be run from root**
+3. `npm run demo.ios` or `npm run demo.android`  **must be run from the root directory**
 
-Those `demo` tasks are just general helpers. You may want to have more granular control on the device and/or emulator you want to run. For that, you can just run things more manual:
+Those `demo` tasks are just general helpers. You may want to have more granular control on the device and/or emulator you want to run. For that, you can just run things the manual way:
 
 ```
 cd demo
