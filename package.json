@@ -5,8 +5,8 @@
 	"main": "yourplugin.js",
 	"nativescript": {
 		"platforms": {
-			"android": "1.6.3",
-      "ios": "1.6.0"
+			"android": "1.7.0",
+      "ios": "1.7.0"
 		}
 	},
 	"scripts": {
