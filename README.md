@@ -2,9 +2,9 @@
 
 ## Getting started
 
-1. Download a zip of this seed.
+1. `git clone https://github.com/NathanWalker/nativescript-plugin-seed.git myplugin
 2. `npm install -g typescript`
-3. `cd ... path/to/unzip/folder ...`
+3. `cd myplugin`
 2. `npm run setup`
 3. Get to work.
 
@@ -39,7 +39,7 @@ Those `demo` tasks are just general helpers. You may want to have more granular 
 ```
 cd demo
 
-// when developing, to ensure the latest code is built into the demo, it's a gaurantee to remove the plugin and add it back
+// when developing, to ensure the latest code is built into the demo, it's a guarantee to remove the plugin and add it back
 tns plugin remove nativescript-yourplugin // replace with your plugin name
 tns plugin add ..
 
