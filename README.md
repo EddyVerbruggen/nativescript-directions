@@ -2,7 +2,7 @@
 
 ## Getting started
 
-1. `git clone https://github.com/NathanWalker/nativescript-plugin-seed.git myplugin
+1. `git clone https://github.com/NathanWalker/nativescript-plugin-seed.git myplugin`
 2. `npm install -g typescript`
 3. `cd myplugin`
 2. `npm run setup`
