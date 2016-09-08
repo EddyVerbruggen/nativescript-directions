@@ -1,6 +1,7 @@
 demo/
+*.jpg
 *.png
 *.log
 *.map
 *.ts
-!.d.ts
+!*.d.ts

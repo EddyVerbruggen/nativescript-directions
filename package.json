@@ -1,8 +1,8 @@
 {
-  "name": "nativescript-yourplugin",
+  "name": "nativescript-taptic-engine",
   "version": "1.0.0",
-  "description": "Your awesome NativeScript plugin.",
-  "main": "yourplugin.js",
+  "description": "Taptic Engine, the subtle iPhone vibration engine. Available since iPhone 6s (Plus).",
+  "main": "taptic-engine.js",
   "typings": "index.d.ts",
   "nativescript": {
     "platforms": {
@@ -12,33 +12,36 @@
   },
   "scripts": {
     "build": "tsc",
-    "demo.ios": "npm run preparedemo && cd demo && tns emulate ios",
+    "demo.ios": "npm run preparedemo && cd demo && tns emulate ios --device \"iPhone 6s\"",
+    "demo.ios.device": "npm run preparedemo && cd demo && tns run ios",
     "demo.android": "npm run preparedemo && cd demo && tns run android",
-    "preparedemo": "npm run build && cd demo && tns plugin remove nativescript-yourplugin && tns plugin add .. && tns install",
+    "preparedemo": "npm run build && cd demo && tns plugin remove nativescript-taptic-engine && tns plugin add .. && tns install",
     "setup": "npm i && cd demo && npm i && cd .. && npm run build && cd demo && tns plugin add .. && cd .."
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/YourName/nativescript-yourplugin.git"
+    "url": "https://github.com/YourName/nativescript-taptic-engine.git"
   },
   "keywords": [
     "NativeScript",
-    "JavaScript",
-    "Android",
-    "iOS"
+    "ecosystem:nativescript",
+    "iOS",
+    "taptic engine",
+    "taptic",
+    "vibration"
   ],
   "author": {
-    "name": "Your Name",
-    "email": "youremail@yourdomain.com"
+    "name": "Eddy Verbruggen",
+    "email": "eddyverbruggen@gmail.com"
   },
   "bugs": {
-    "url": "https://github.com/YourName/nativescript-yourplugin/issues"
+    "url": "https://github.com/EddyVerbruggen/nativescript-taptic-engine/issues"
   },
   "license": {
     "type": "MIT",
-    "url": "https://github.com/YourName/nativescript-yourplugin/blob/master/LICENSE"
+    "url": "https://github.com/EddyVerbruggen/nativescript-taptic-engine/blob/master/LICENSE"
   },
-  "homepage": "https://github.com/YourName/nativescript-yourplugin",
+  "homepage": "https://github.com/EddyVerbruggen/nativescript-taptic-engine",
   "readmeFilename": "README.md",
   "devDependencies": {
     "tns-core-modules": "^2.2.0",

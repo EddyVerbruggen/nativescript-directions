@@ -1,5 +1,9 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="pageLoaded">
   <StackLayout>
-    <Label text="{{ message }}" class="message" textWrap="true"/>
+    <Image margin="20" src="~/res/taptic-engine.jpg" />
+    <Label text="If your iOS device has a Taptic Engine you will feel it vibrate when you press one of these buttons." class="message" textWrap="true"/>
+    <Button text="weak boom (peek)" tap="{{ doWeakBoom }}" cssClass="button button-weakboom" />
+    <Button text="strong boom (pop)" tap="{{ doStrongBoom }}" cssClass="button button-strongboom" />
+    <Button text="burst (nope!)" tap="{{ doBurst }}" cssClass="button button-burst" />
   </StackLayout>
 </Page>
