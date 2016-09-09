@@ -1,4 +1,5 @@
 demo/
+*.gif
 *.jpg
 *.png
 *.log

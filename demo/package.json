@@ -9,7 +9,7 @@
     }
   },
   "dependencies": {
-    "nativescript-taptic-engine": "file:..",
+    "nativescript-directions": "file:..",
     "tns-core-modules": "^2.2.0"
   },
   "devDependencies": {

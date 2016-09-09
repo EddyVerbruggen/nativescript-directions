@@ -1,44 +1,39 @@
-# NativeScript Taptic Engine plugin
+# NativeScript Directions plugin
 
-> __BEWARE__ This plugin uses an undocumented feature which may get your app rejected when reviewed by Apple. Once Apple releases an official API this plugin will be updated of course. [People have used this approach __without problems__ though.](http://stackoverflow.com/questions/32526868/taptic-in-ios-9)
-
-
-<img src="taptic-6s-plus.jpg" width="541px" height="350px"/>
+<img src="directions-animated.gif" width="320px" height="570px"/>
 
 ### Supported platforms
-* iPhone 6s / 6s Plus or newer
+* iOS
+* Android
 
 ## Installation
 From the command prompt go to your app's root folder and execute:
 
 ```
-tns plugin add nativescript-taptic-engine
+tns plugin add nativescript-directions
 ```
 
 ## Demo app
 Want to dive in quickly? Check out [the demo app](demo)! Otherwise, continue reading.
 
-You can run the demo app from the root of the project by typing `npm run demo.ios.device`.
+You can run the demo app from the root of the project by typing `npm run demo.ios.device` or `npm run demo.android`.
 
 ## API
 
-### `weakBoom`
-This triggers the same effect as the 'Peek' in 'Peek & Pop', a very brief vibration.
+### `available`
+Not all devices have the Google (Android) or Apple (iOS) Maps app installed. Well, most do of course, but on an Android simulator you may be out of luck, so let's check beforehand:
 
 ##### JavaScript
 ```js
 // require the plugin
-var TapticEngine = require("nativescript-taptic-engine").TapticEngine;
+var Directions = require("nativescript-directions").Directions;
 
 // instantiate the plugin
-var tapticEngine = new TapticEngine();
+var directions = new Directions();
 
-tapticEngine.weakBoom().then(
-  function() {
-    // note that unsupported iOS devices like the simulator also end up here, at the moment
-    console.log("Boomed weakly, if available.");
-  }, function () {
-    console.log("You're running on Android. Meh.");
+directions.available().then(
+  function(avail) {
+    console.log(avail ? "Yes" : "No");
   }
 );
 ```
@@ -46,31 +41,65 @@ tapticEngine.weakBoom().then(
 ##### TypeScript
 ```js
 // require the plugin
-import {TapticEngine} from "nativescript-taptic-engine";
+import {Directions} from "nativescript-directions";
 
 // instantiate the plugin
-let tapticEngine = new TapticEngine();
+let directions = new Directions();
 
-tapticEngine.weakBoom().then(() => {
-  // note that unsupported iOS devices like the simulator also end up here, at the moment
-}, (err) => {
-  console.log("You're running on Android. Meh.");
+directions.available().then((avail) => {
+    console.log(avail ? "Yes" : "No");
 });
 ```
 
-### `strongBoom`
-This triggers the 'Pop' effect of 'Peek & Pop', which is a bit more profound than the 'Peek' effect.
+### `navigate`
+This function opens the native Maps app with a predefined `from` and `to` address.
 
-Codewise this is exactly the same as `weakBoom`, except for the function name of course.
+If you don't pass `from` the current location of the user will be used.
 
+If an `address` is specified then `lat` and `lng` will be ignored.
 
-### `burst`
-This triggers the 'Nope' effect you get when fi. force touching a home icon which doesn't have any action. It's a short burst of 3-ish 'weak booms'.
+Note that if there's an ocean in between `from` and `to` you won't be able to get directions, don't blame this plugin for that 😁
 
-Codewise this is exactly the same as `weakBoom` and `strongBoom`, except for the function name of course.
+##### JavaScript
+```js
+directions.navigate({
+  from: { // optional, default 'current location'
+    lat: 52.215987,
+    lng: 5.282764
+  },
+  to: {
+    address: "Hof der Kolommen 34, Amersfoort, Netherlands",
+  }
+}).then(
+  function() {
+    console.log("Maps app launched.");
+  },
+  function(error) {
+    console.log(error);
+  },
+);
+```
+
+##### TypeScript
+```js
+directions.navigate({
+  from: { // optional, default 'current location'
+    lat: 52.215987,
+    lng: 5.282764
+  },
+  to: {
+    address: "Hof der Kolommen 34, Amersfoort, Netherlands",
+  }
+}).then(() => {
+    console.log("Maps app launched.");
+}, (error) => {
+    console.log(error);
+});
+```
+
 
 ## Changelog
 * 1.0.0  Initial release
 
 ## Future work
-* Implement the official API. If any. Ever.
+* Perhaps add Android-specific options like opening the map in StreetView mode, or pre-defining the transportation type (walk/bike/dcar).

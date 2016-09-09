@@ -1,6 +1,6 @@
 ﻿.message {
   color: #666;
-  font-size: 17;
+  font-size: 16;
   horizontal-align: center;
   padding:20;
 }
@@ -8,7 +8,7 @@
 button {
   background-color: #6494AA;
   padding: 10;
-  margin: 10 20;
+  margin: 6 20;
   font-size: 14;
   border-radius: 6;
 }
@@ -17,14 +17,18 @@ button {
   color: #ffffff;
 }
 
-.button-weakboom {
+.button-a {
   background-color: #90A959;
 }
 
-.button-strongboom {
+.button-b {
   background-color: #E0A458;
 }
 
-.button-burst {
+.button-c {
   background-color: #64A4FF;
+}
+
+.button-d {
+  background-color: #22B4CC;
 }

@@ -12,9 +12,9 @@
       "node_modules/tns-platform-declarations/tns-core-modules/android17.d.ts",
       "node_modules/tns-platform-declarations/tns-core-modules/ios.d.ts",
       "node_modules/tns-platform-declarations/tns-core-modules/org.nativescript.widgets.d.ts",
-      "taptic-engine.common.ts",
-      "taptic-engine.android.ts",
-      "taptic-engine.ios.ts"
+      "directions.common.ts",
+      "directions.android.ts",
+      "directions.ios.ts"
     ],
     "compileOnSave": false
 }

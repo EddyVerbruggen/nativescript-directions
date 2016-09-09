@@ -1,8 +1,8 @@
 {
-  "name": "nativescript-taptic-engine",
+  "name": "nativescript-directions",
   "version": "1.0.0",
-  "description": "Taptic Engine, the subtle iPhone vibration engine. Available since iPhone 6s (Plus).",
-  "main": "taptic-engine.js",
+  "description": "Leverage the native Maps app to show directions from and to anywhere you like.",
+  "main": "directions.js",
   "typings": "index.d.ts",
   "nativescript": {
     "platforms": {
@@ -15,33 +15,32 @@
     "demo.ios": "npm run preparedemo && cd demo && tns emulate ios --device \"iPhone 6s\"",
     "demo.ios.device": "npm run preparedemo && cd demo && tns run ios",
     "demo.android": "npm run preparedemo && cd demo && tns run android",
-    "preparedemo": "npm run build && cd demo && tns plugin remove nativescript-taptic-engine && tns plugin add .. && tns install",
+    "preparedemo": "npm run build && cd demo && tns plugin remove nativescript-directions && tns plugin add .. && tns install",
     "setup": "npm i && cd demo && npm i && cd .. && npm run build && cd demo && tns plugin add .. && cd .."
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/YourName/nativescript-taptic-engine.git"
+    "url": "https://github.com/YourName/nativescript-directions.git"
   },
   "keywords": [
     "NativeScript",
     "ecosystem:nativescript",
     "iOS",
-    "taptic engine",
-    "taptic",
-    "vibration"
+    "directions",
+    "route"
   ],
   "author": {
     "name": "Eddy Verbruggen",
     "email": "eddyverbruggen@gmail.com"
   },
   "bugs": {
-    "url": "https://github.com/EddyVerbruggen/nativescript-taptic-engine/issues"
+    "url": "https://github.com/EddyVerbruggen/nativescript-directions/issues"
   },
   "license": {
     "type": "MIT",
-    "url": "https://github.com/EddyVerbruggen/nativescript-taptic-engine/blob/master/LICENSE"
+    "url": "https://github.com/EddyVerbruggen/nativescript-directions/blob/master/LICENSE"
   },
-  "homepage": "https://github.com/EddyVerbruggen/nativescript-taptic-engine",
+  "homepage": "https://github.com/EddyVerbruggen/nativescript-directions",
   "readmeFilename": "README.md",
   "devDependencies": {
     "tns-core-modules": "^2.2.0",
