@@ -1,10 +1,5 @@
 # NativeScript Directions plugin
-
-<img src="directions-animated.gif" width="320px" height="570px"/>
-
-### Supported platforms
-* iOS
-* Android
+For iOS and Android
 
 ## Installation
 From the command prompt go to your app's root folder and execute:
@@ -17,6 +12,8 @@ tns plugin add nativescript-directions
 Want to dive in quickly? Check out [the demo app](demo)! Otherwise, continue reading.
 
 You can run the demo app from the root of the project by typing `npm run demo.ios.device` or `npm run demo.android`.
+
+<img src="directions-animated.gif" width="320px" height="570px"/>
 
 ## API
 
