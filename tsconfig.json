@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "module": "commonjs",
+        "removeComments": true,
+        "experimentalDecorators": true,
+        "noEmitHelpers": true,
+        "declaration": true
+    },
+    "files": [
+      "node_modules/tns-core-modules/tns-core-modules.d.ts",
+      "node_modules/tns-platform-declarations/tns-core-modules/android17.d.ts",
+      "node_modules/tns-platform-declarations/tns-core-modules/ios.d.ts",
+      "node_modules/tns-platform-declarations/tns-core-modules/org.nativescript.widgets.d.ts",
+      "directions.common.ts",
+      "directions.android.ts",
+      "directions.ios.ts"
+    ],
+    "compileOnSave": false
+}

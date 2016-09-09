@@ -1,0 +1,13 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="pageLoaded">
+  <ScrollView>
+    <StackLayout>
+      <Image margin="0" src="~/res/directions.jpg" />
+      <Label text="You get to control both the from and to address. Both specified either as address string or GPS coordinates." class="message" textWrap="true"/>
+      <Button text="is maps app available?" tap="{{ doCheckAvailable }}" cssClass="button button-a" />
+      <Button text="from current location to address" tap="{{ doCurrentLocationToAddress }}" cssClass="button" />
+      <Button text="from address to address" tap="{{ doAddressToAddress }}" cssClass="button" />
+      <Button text="from address to coord" tap="{{ doAddressToCoord }}" cssClass="button" />
+      <Button text="from coord to coord" tap="{{ doCoordToCoord }}" cssClass="button" />
+    </StackLayout>
+  </ScrollView>
+</Page>
