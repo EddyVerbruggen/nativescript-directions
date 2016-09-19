@@ -1,13 +1,16 @@
 import {NavigateToOptions} from "./directions.common";
 import {android as AndroidApplication} from "application";
 
+// ignore TS error
+let com: any;
+
 export class Directions {
 
   private static MAPS_PACKAGE = "com.google.android.apps.maps";
 
   private isPackageInstalled(): boolean {
     try {
-      let pm = AndroidApplication.context.getPackageManager();
+      let pm = com.tns.NativeScriptApplication.getInstance().getPackageManager();
       pm.getPackageInfo(Directions.MAPS_PACKAGE, android.content.pm.PackageManager.GET_ACTIVITIES);
       return true;
     } catch (e) {
