@@ -1,4 +1,5 @@
 import {NavigateToOptions} from "./directions.common";
+import * as utils from "utils/utils";
 
 export class Directions {
 
@@ -23,7 +24,7 @@ export class Directions {
       if (!options.to) {
         reject("Set 'to', please.");
         return;
-      };
+      }
 
       if (options.to.address) {
         dest = options.to.address;
@@ -34,10 +35,7 @@ export class Directions {
         return;
       }
 
-      let url = "http://maps.apple.com/maps?saddr=" + encodeURIComponent(source) + "&daddr=" + encodeURIComponent(dest);
-
-      UIApplication.sharedApplication().openURL(NSURL.URLWithString(url));
-
+      utils.openUrl("http://maps.apple.com/maps?saddr=" + encodeURIComponent(source) + "&daddr=" + encodeURIComponent(dest));
       resolve();
     });
   }
