@@ -3,6 +3,11 @@
 ## [1.0.3](https://github.com/EddyVerbruggen/nativescript-directions/tree/1.0.3) (2016-10-27)
 [Full Changelog](https://github.com/EddyVerbruggen/nativescript-directions/compare/1.0.2...1.0.3)
 
+**Fixed bugs:**
+
+- available\(\) returns false on Android with Google Maps installed [\#3](https://github.com/EddyVerbruggen/nativescript-directions/issues/3)
+- Maps not installed message even though google maps is installed on demo and my app [\#2](https://github.com/EddyVerbruggen/nativescript-directions/issues/2)
+
 **Closed issues:**
 
 - Failed to load plugin demo [\#1](https://github.com/EddyVerbruggen/nativescript-directions/issues/1)
