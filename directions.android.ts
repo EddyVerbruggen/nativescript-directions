@@ -6,16 +6,17 @@ let com: any;
 
 export class Directions {
 
-  private static MAPS_PACKAGE = "com.google.android.apps.maps";
-
   private isPackageInstalled(): boolean {
     try {
+      let intent = new android.content.Intent(
+        android.content.Intent.ACTION_VIEW,
+        android.net.Uri.parse("http://maps.google.com/maps"));
+
       let pm = com.tns.NativeScriptApplication.getInstance().getPackageManager();
-      pm.getPackageInfo(Directions.MAPS_PACKAGE, android.content.pm.PackageManager.GET_ACTIVITIES);
-      return true;
+      return intent.resolveActivity(pm) != null;
     } catch (e) {
     }
-    return false;
+    return true;
   }
 
   public available(): Promise<any> {
@@ -61,8 +62,6 @@ export class Directions {
       let intent = new android.content.Intent(
         android.content.Intent.ACTION_VIEW,
         android.net.Uri.parse(url));
-
-      intent.setClassName(Directions.MAPS_PACKAGE, "com.google.android.maps.MapsActivity");
 
       AndroidApplication.currentContext.startActivityForResult(intent, 0);
 

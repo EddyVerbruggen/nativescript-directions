@@ -94,9 +94,5 @@ directions.navigate({
 });
 ```
 
-
-## Changelog
-* 1.0.0  Initial release
-
 ## Future work
 * Perhaps add Android-specific options like opening the map in StreetView mode, or pre-defining the transportation type (walk/bike/car).
