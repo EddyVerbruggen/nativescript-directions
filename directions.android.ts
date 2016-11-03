@@ -1,5 +1,6 @@
 import {NavigateToOptions} from "./directions.common";
-import {android as AndroidApplication} from "application";
+// import {android as AndroidApplication} from "application";
+import * as application from "application";
 
 // ignore TS error
 let com: any;
@@ -63,7 +64,7 @@ export class Directions {
         android.content.Intent.ACTION_VIEW,
         android.net.Uri.parse(url));
 
-      AndroidApplication.currentContext.startActivityForResult(intent, 0);
+      application.android.currentContext.startActivityForResult(intent, 0);
 
       resolve();
     });
