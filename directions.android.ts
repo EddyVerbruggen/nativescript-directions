@@ -1,5 +1,4 @@
 import {NavigateToOptions} from "./directions.common";
-// import {android as AndroidApplication} from "application";
 import * as application from "application";
 
 // ignore TS error
