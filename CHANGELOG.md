@@ -1,5 +1,16 @@
 # Change Log
 
+## [1.0.4](https://github.com/EddyVerbruggen/nativescript-directions/tree/1.0.4) (2016-11-03)
+[Full Changelog](https://github.com/EddyVerbruggen/nativescript-directions/compare/1.0.3...1.0.4)
+
+**Fixed bugs:**
+
+- TS transpiling issue [\#4](https://github.com/EddyVerbruggen/nativescript-directions/issues/4)
+
+**Merged pull requests:**
+
+- Fix issue \#4 [\#5](https://github.com/EddyVerbruggen/nativescript-directions/pull/5) ([bradmartin](https://github.com/bradmartin))
+
 ## [1.0.3](https://github.com/EddyVerbruggen/nativescript-directions/tree/1.0.3) (2016-10-27)
 [Full Changelog](https://github.com/EddyVerbruggen/nativescript-directions/compare/1.0.2...1.0.3)
 
