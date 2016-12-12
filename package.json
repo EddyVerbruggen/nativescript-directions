@@ -2,7 +2,7 @@
   "name": "nativescript-directions",
   "version": "1.0.4",
   "description": "Leverage the native Maps app to show directions from and to anywhere you like.",
-  "main": "directions.js",
+  "main": "directions",
   "typings": "index.d.ts",
   "nativescript": {
     "platforms": {
