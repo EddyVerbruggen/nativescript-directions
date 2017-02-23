@@ -1,5 +1,17 @@
 # Change Log
 
+## [1.0.5](https://github.com/EddyVerbruggen/nativescript-directions/tree/1.0.5) (2017-02-23)
+[Full Changelog](https://github.com/EddyVerbruggen/nativescript-directions/compare/1.0.4...1.0.5)
+
+**Implemented enhancements:**
+
+- Error after installed web pack [\#10](https://github.com/EddyVerbruggen/nativescript-directions/issues/10)
+
+**Closed issues:**
+
+- How do i get the current location \(latitude and longitude\) [\#9](https://github.com/EddyVerbruggen/nativescript-directions/issues/9)
+- Add .idea to npmignore [\#7](https://github.com/EddyVerbruggen/nativescript-directions/issues/7)
+
 ## [1.0.4](https://github.com/EddyVerbruggen/nativescript-directions/tree/1.0.4) (2016-11-03)
 [Full Changelog](https://github.com/EddyVerbruggen/nativescript-directions/compare/1.0.3...1.0.4)
 
