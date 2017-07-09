@@ -1,6 +1,6 @@
 {
   "name": "nativescript-directions",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Leverage the native Maps app to show directions from and to anywhere you like.",
   "main": "directions",
   "typings": "index.d.ts",
@@ -36,16 +36,13 @@
   "bugs": {
     "url": "https://github.com/EddyVerbruggen/nativescript-directions/issues"
   },
-  "license": {
-    "type": "MIT",
-    "url": "https://github.com/EddyVerbruggen/nativescript-directions/blob/master/LICENSE"
-  },
+  "license": "MIT",
   "homepage": "https://github.com/EddyVerbruggen/nativescript-directions",
   "readmeFilename": "README.md",
   "devDependencies": {
-    "nativescript-dev-typescript": "^0.3.2",
-    "tns-core-modules": "^2.3.0",
-    "tns-platform-declarations": "^2.3.0",
-    "typescript": "^1.8.10"
+    "nativescript-dev-typescript": "~0.5.0",
+    "tns-core-modules": "~3.0.0",
+    "tns-platform-declarations": "~3.0.0",
+    "typescript": "^2.3.10"
   }
 }

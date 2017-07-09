@@ -1,23 +1,30 @@
 {
     "compilerOptions": {
+        "noEmitOnError": true,
+        "noEmitHelpers": true,
+        "removeComments": true,
+        "declaration": false,
+        "experimentalDecorators": true,
         "target": "es5",
         "module": "commonjs",
-        "removeComments": true,
-        "experimentalDecorators": true,
-        "noEmitHelpers": true,
-        "declaration": true,
-        "noLib": true
+        "lib": [
+            "es6",
+            "dom"
+        ],
+        "skipLibCheck": true,
+        "rootDir": ".",
+        "baseUrl": ".",
+        "paths": {
+            "*": [
+                "./node_modules/tns-core-modules/*",
+                "./node_modules/*"
+            ]
+        }
     },
-    "files": [
-      "node_modules/typescript/lib/lib.core.d.ts",
-      "manual_typings/base.d.ts",
-      "node_modules/tns-core-modules/tns-core-modules.d.ts",
-      "node_modules/tns-platform-declarations/tns-core-modules/android17.d.ts",
-      "node_modules/tns-platform-declarations/tns-core-modules/ios/ios.d.ts",
-      "node_modules/tns-platform-declarations/tns-core-modules/org.nativescript.widgets.d.ts",
-      "directions.common.ts",
-      "directions.android.ts", 
-      "directions.ios.ts"
-    ],
-    "compileOnSave": false
+    "include": [
+        "index.d.ts",
+        "references.d.ts",
+        "direction.android.ts",
+        "direction.ios.ts"
+    ]
 }

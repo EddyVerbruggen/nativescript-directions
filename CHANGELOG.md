@@ -1,5 +1,12 @@
 # Change Log
 
+## [1.0.6](https://github.com/EddyVerbruggen/nativescript-directions/tree/1.0.6) (2017-07-09)
+[Full Changelog](https://github.com/EddyVerbruggen/nativescript-directions/compare/1.0.5...1.0.6)
+
+**Closed issues:**
+
+- Can't run demo [\#12](https://github.com/EddyVerbruggen/nativescript-directions/issues/12)
+
 ## [1.0.5](https://github.com/EddyVerbruggen/nativescript-directions/tree/1.0.5) (2017-02-23)
 [Full Changelog](https://github.com/EddyVerbruggen/nativescript-directions/compare/1.0.4...1.0.5)
 

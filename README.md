@@ -1,5 +1,17 @@
 # NativeScript Directions plugin
-For iOS and Android
+
+[![Build Status][build-status]][build-url]
+[![NPM version][npm-image]][npm-url]
+[![Downloads][downloads-image]][npm-url]
+[![Twitter Follow][twitter-image]][twitter-url]
+
+[build-status]:https://travis-ci.org/EddyVerbruggen/nativescript-directions.svg?branch=master
+[build-url]:https://travis-ci.org/EddyVerbruggen/nativescript-directions
+[npm-image]:http://img.shields.io/npm/v/nativescript-directions.svg
+[npm-url]:https://npmjs.org/package/nativescript-directions
+[downloads-image]:http://img.shields.io/npm/dm/nativescript-directions.svg
+[twitter-image]:https://img.shields.io/twitter/follow/eddyverbruggen.svg?style=social&label=Follow%20me
+[twitter-url]:https://twitter.com/eddyverbruggen
 
 ## Installation
 From the command prompt go to your app's root folder and execute:
@@ -36,14 +48,14 @@ directions.available().then(
 ```
 
 ##### TypeScript
-```js
+```typescript
 // require the plugin
-import {Directions} from "nativescript-directions";
+import { Directions } from "nativescript-directions";
 
 // instantiate the plugin
 let directions = new Directions();
 
-directions.available().then((avail) => {
+directions.available().then(avail => {
     console.log(avail ? "Yes" : "No");
 });
 ```
@@ -65,7 +77,7 @@ directions.navigate({
     lng: 5.282764
   },
   to: {
-    address: "Hof der Kolommen 34, Amersfoort, Netherlands",
+    address: "Hof der Kolommen 34, Amersfoort, Netherlands"
   }
 }).then(
   function() {
@@ -73,12 +85,12 @@ directions.navigate({
   },
   function(error) {
     console.log(error);
-  },
+  }
 );
 ```
 
 ##### TypeScript
-```js
+```typescript
 directions.navigate({
   from: { // optional, default 'current location'
     lat: 52.215987,
@@ -89,7 +101,7 @@ directions.navigate({
   }
 }).then(() => {
     console.log("Maps app launched.");
-}, (error) => {
+}, error => {
     console.log(error);
 });
 ```
