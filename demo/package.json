@@ -9,7 +9,7 @@
     }
   },
   "dependencies": {
-    "nativescript-directions": "file:///Users/eddyverbruggen/sandboxes/nativescript-directions",
+    "nativescript-directions": "file:..",
     "tns-core-modules": "~3.1.0"
   },
   "devDependencies": {
