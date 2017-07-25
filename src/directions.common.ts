@@ -38,7 +38,7 @@ export interface NavigateToOptions {
      * you can either open Apple Maps and the first waypoint is used as the to-address (the rest is ignored),
      * or you can open Google Maps on web so all waypoints are shown (set this property to true).
      *
-     * Default false;
+     * Default false.
      */
     allowGoogleMapsWeb?: boolean;
   };
