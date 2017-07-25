@@ -1,5 +1,12 @@
 # Change Log
 
+## [1.1.0](https://github.com/EddyVerbruggen/nativescript-directions/tree/1.1.0) (2017-07-25)
+[Full Changelog](https://github.com/EddyVerbruggen/nativescript-directions/compare/1.0.6...1.1.0)
+
+**Implemented enhancements:**
+
+- How do I add a stop or have multiple directions using this plugin? [\#11](https://github.com/EddyVerbruggen/nativescript-directions/issues/11)
+
 ## [1.0.6](https://github.com/EddyVerbruggen/nativescript-directions/tree/1.0.6) (2017-07-09)
 [Full Changelog](https://github.com/EddyVerbruggen/nativescript-directions/compare/1.0.5...1.0.6)
 

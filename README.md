@@ -67,6 +67,8 @@ If you don't pass `from` the current location of the user will be used.
 
 If an `address` is specified then `lat` and `lng` will be ignored.
 
+If you pass in an Array of `to` addresses, then the last item is the destination, the others become 'waypoints'.
+
 Note that if there's an ocean in between `from` and `to` you won't be able to get directions, don't blame this plugin for that 😁
 
 ##### JavaScript
@@ -76,7 +78,7 @@ directions.navigate({
     lat: 52.215987,
     lng: 5.282764
   },
-  to: {
+  to: { // either pass in a single object or an Array (see the TypeScript example below)
     address: "Hof der Kolommen 34, Amersfoort, Netherlands"
   }
 }).then(
@@ -96,9 +98,12 @@ directions.navigate({
     lat: 52.215987,
     lng: 5.282764
   },
-  to: {
+  to: [{ // if an Array is passed (as in this example), the last item is the destination, the addresses in between are 'waypoints'.
     address: "Hof der Kolommen 34, Amersfoort, Netherlands",
-  }
+  },
+  {
+    address: "Aak 98, Wieringerwerf, Netherlands"
+  }]
 }).then(() => {
     console.log("Maps app launched.");
 }, error => {
