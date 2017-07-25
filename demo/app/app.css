@@ -1,8 +1,11 @@
-﻿.message {
+﻿Label {
   color: #666;
+  text-align: center;
+}
+
+Label.message {
   font-size: 16;
-  horizontal-align: center;
-  padding:20;
+  padding: 20;
 }
 
 button {
@@ -31,4 +34,9 @@ button {
 
 .button-d {
   background-color: #22B4CC;
+}
+
+Label.hint {
+  padding-top: 10;
+  font-size: 13;
 }

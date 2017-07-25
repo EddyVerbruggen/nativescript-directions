@@ -3,7 +3,7 @@
         "noEmitOnError": true,
         "noEmitHelpers": true,
         "removeComments": true,
-        "declaration": false,
+        "declaration": true,
         "experimentalDecorators": true,
         "target": "es5",
         "module": "commonjs",
@@ -24,7 +24,7 @@
     "include": [
         "index.d.ts",
         "references.d.ts",
-        "direction.android.ts",
-        "direction.ios.ts"
+        "directions.android.ts",
+        "directions.ios.ts"
     ]
 }

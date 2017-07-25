@@ -1,5 +1,5 @@
-import {Observable} from "data/observable";
-import {Directions} from "nativescript-directions";
+import { Observable } from "data/observable";
+import { Directions } from "nativescript-directions";
 
 export class HelloWorldModel extends Observable {
   public message: string;
@@ -22,7 +22,7 @@ export class HelloWorldModel extends Observable {
   public doCurrentLocationToAddress() {
     this.directions.navigate({
       to: {
-        address: "Hof der Kolommen 34, Amersfoort, Netherlands",
+        address: "Hof der Kolommen 34, Amersfoort, Netherlands"
       }
     }).then(() => {
       console.log("Current location to address directions launched!");
@@ -31,13 +31,20 @@ export class HelloWorldModel extends Observable {
     });
   }
 
-  public doAddressToAddress() {
+  public doAddressToAddressToAddress() {
     this.directions.navigate({
       from: {
-        address: "Hof der Kolommen 34, Amersfoort, Netherlands",
+        address: "Hof der Kolommen 34, Amersfoort, Netherlands"
       },
-      to: {
-        address: "Middenstraat 21, Loppersum, Netherlands",
+      to: [
+        {
+          address: "Middenstraat 21, Loppersum, Netherlands"
+        },
+        {
+          address: "Aak 98, Wieringerwerf, Netherlands"
+        }],
+      ios: {
+        allowGoogleMapsWeb: true
       }
     }).then(() => {
       console.log("Address to address directions launched!");
@@ -49,11 +56,14 @@ export class HelloWorldModel extends Observable {
   public doAddressToCoord() {
     this.directions.navigate({
       from: {
-        address: "Hof der Kolommen 34, Amersfoort, Netherlands",
+        address: "Hof der Kolommen 34, Amersfoort, Netherlands"
       },
-      to: {
+      to: [{
         lat: 52.215987,
         lng: 5.282764
+      }],
+      ios: {
+        preferGoogleMaps: false
       }
     }).then(() => {
       console.log("Address to coord directions launched!");

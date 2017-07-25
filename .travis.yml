@@ -34,5 +34,5 @@ before_script:
 
 script:
     - cd src
-    - npm run setup
-    - npm run demo.android
+    - npm run preparedemo
+    - npm test

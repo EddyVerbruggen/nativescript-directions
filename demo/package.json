@@ -9,8 +9,8 @@
     }
   },
   "dependencies": {
-    "nativescript-directions": "file:..",
-    "tns-core-modules": "~3.1.0"
+    "nativescript-directions": "file:///Users/eddyverbruggen/sandboxes/nativescript-directions/src",
+    "tns-core-modules": "^3.1.0"
   },
   "devDependencies": {
     "babel-traverse": "6.12.0",

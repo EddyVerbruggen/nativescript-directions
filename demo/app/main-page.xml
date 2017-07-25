@@ -5,9 +5,12 @@
       <Label text="You get to control both the from and to address. Both specified either as address string or GPS coordinates." class="message" textWrap="true"/>
       <Button text="is maps app available?" tap="{{ doCheckAvailable }}" class="button button-a" />
       <Button text="from current location to address" tap="{{ doCurrentLocationToAddress }}" class="button" />
-      <Button text="from address to address" tap="{{ doAddressToAddress }}" class="button" />
-      <Button text="from address to coord" tap="{{ doAddressToCoord }}" class="button" />
       <Button text="from coord to coord" tap="{{ doCoordToCoord }}" class="button" />
+      <Button text="from address to address to address" tap="{{ doAddressToAddressToAddress }}" class="button" />
+      <ios>
+        <Label text="This one prefers Apple Maps on iOS:" textWrap="true" class="hint"/>
+      </ios>
+      <Button text="from address to coord" tap="{{ doAddressToCoord }}" class="button" />
     </StackLayout>
   </ScrollView>
 </Page>

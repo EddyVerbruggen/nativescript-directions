@@ -1,6 +1,6 @@
 {
   "name": "nativescript-directions",
-  "version": "1.0.6",
+  "version": "1.1.0",
   "description": "Leverage the native Maps app to show directions from and to anywhere you like.",
   "main": "directions",
   "typings": "index.d.ts",
@@ -12,10 +12,15 @@
   },
   "scripts": {
     "build": "tsc",
-    "demo.ios": "npm run preparedemo && cd demo && tns run ios",
-    "demo.android": "npm run preparedemo && cd demo && tns run android",
-    "preparedemo": "npm run build && cd demo && tns plugin remove nativescript-directions && tns plugin add .. && tns install",
-    "setup": "npm i && cd demo && npm i && cd .. && npm run build && cd demo && tns plugin add .. && cd .."
+    "demo.ios": "npm run preparedemo && cd ../demo && tns platform remove ios && tns run ios",
+    "demo.android": "npm run preparedemo && cd ../demo && tns platform remove android && tns run android --justlaunch",
+    "test": "npm run build && npm run tslint && npm run tslint.demo && cd ../demo && tns build android",
+    "test.ios": "cd ../demo && tns platform remove ios && tns test ios --emulator",
+    "test.ios.device": "cd ../demo && tns platform remove ios && tns test ios",
+    "test.android": "cd ../demo && tns platform remove android && tns test android --justlaunch",
+    "preparedemo": "npm run build && cd ../demo && tns plugin remove nativescript-directions && tns plugin add ../src && tns install",
+    "tslint": "tslint *.ts",
+    "tslint.demo": "tslint ../demo/app/*.ts"
   },
   "repository": {
     "type": "git",
@@ -38,10 +43,14 @@
   "license": "MIT",
   "homepage": "https://github.com/EddyVerbruggen/nativescript-directions",
   "readmeFilename": "README.md",
+  "dependencies": {
+    "nativescript-appavailability": "1.3.1"
+  },
   "devDependencies": {
     "nativescript-dev-typescript": "~0.5.0",
     "tns-core-modules": "~3.0.0",
     "tns-platform-declarations": "~3.0.0",
-    "typescript": "^2.3.10"
+    "typescript": "~2.3.0",
+    "tslint": "~5.0.0"
   }
 }
