@@ -58,7 +58,7 @@ matrix:
       jdk: oraclejdk8
       before_install: nvm install 6.10.3
       script:
-        - cd ../demo && tns test android
+        - cd ../demo && tns build android
     - os: osx
       env: 
         - BuildiOS="10.3"
@@ -68,5 +68,5 @@ matrix:
       node_js: "6"
       jdk: oraclejdk8
       script: 
-        - cd ../demo && tns test ios
+        - cd ../demo && tns build ios
     
