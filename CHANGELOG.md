@@ -1,5 +1,12 @@
 # Change Log
 
+## [1.1.1](https://github.com/EddyVerbruggen/nativescript-directions/tree/1.1.0) (2017-09-12)
+[Full Changelog](https://github.com/EddyVerbruggen/nativescript-directions/compare/1.1.0...1.1.1)
+
+**Implemented enhancements:**
+
+- Align with the official NativeScript plugin seed [\#13](https://github.com/EddyVerbruggen/nativescript-directions/issues/13)
+
 ## [1.1.0](https://github.com/EddyVerbruggen/nativescript-directions/tree/1.1.0) (2017-07-25)
 [Full Changelog](https://github.com/EddyVerbruggen/nativescript-directions/compare/1.0.6...1.1.0)
 

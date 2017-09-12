@@ -1,5 +1,5 @@
 import { DirectionsCommon, NavigateToOptions } from "./directions.common";
-import * as utils from "utils/utils";
+import * as utils from "tns-core-modules/utils/utils";
 const isAppAvailable = require("nativescript-appavailability").availableSync;
 
 export class Directions extends DirectionsCommon {
@@ -14,14 +14,13 @@ export class Directions extends DirectionsCommon {
     return new Promise((resolve, reject) => {
       try {
         const fromToQs = Directions.getFromToQuerystring(options);
-        console.log("fromToQs: " + fromToQs);
 
         if ((options.ios === undefined || options.ios.preferGoogleMaps !== false) && isAppAvailable("comgooglemaps://")) {
           // if Google maps is installed, use that, otherwise use Apple maps (which doesn't support waypoints.. so nav to the first destination if that's used)
           // url = `http://maps.google.com/maps?${fromToQs}+to:${encodeURIComponent("Weerdestein 144, Dordrecht, Netherlands")}`;
           utils.openUrl("comgooglemaps://" + fromToQs);
         } else if (options.ios && options.ios.allowGoogleMapsWeb && options.to instanceof Array && options.to.length > 1) {
-          // TODO see web doc if this doesnt work
+          // TODO see web doc if this doesn't work
           utils.openUrl("http://maps.google.com/maps" + fromToQs);
         } else {
           utils.openUrl("http://maps.apple.com/maps" + fromToQs);

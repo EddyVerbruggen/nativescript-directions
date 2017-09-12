@@ -1,8 +1,7 @@
-import { Observable } from "data/observable";
+import { Observable } from "tns-core-modules/data/observable";
 import { Directions } from "nativescript-directions";
 
 export class HelloWorldModel extends Observable {
-  public message: string;
   private directions: Directions;
 
   constructor() {
@@ -53,7 +52,7 @@ export class HelloWorldModel extends Observable {
     });
   }
 
-  public doAddressToCoord() {
+  public doAddressToCoordinate() {
     this.directions.navigate({
       from: {
         address: "Hof der Kolommen 34, Amersfoort, Netherlands"
@@ -72,7 +71,7 @@ export class HelloWorldModel extends Observable {
     });
   }
 
-  public doCoordToCoord() {
+  public doCoordinateToCoordinate() {
     this.directions.navigate({
       from: {
         lat: 52.215987,

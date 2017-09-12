@@ -20,13 +20,6 @@ From the command prompt go to your app's root folder and execute:
 tns plugin add nativescript-directions
 ```
 
-## Demo app
-Want to dive in quickly? Check out [the demo app](demo)! Otherwise, continue reading.
-
-You can run the demo app from the root of the project by typing `npm run demo.ios.device` or `npm run demo.android`.
-
-<img src="https://raw.githubusercontent.com/EddyVerbruggen/nativescript-directions/master/media/directions-animated.gif" width="320px" height="570px"/>
-
 ## API
 
 ### `available`
@@ -115,6 +108,18 @@ directions.navigate({
     console.log(error);
 });
 ```
+
+## Usage
+
+### Demo app (XML + TypeScript)
+Want to dive in quickly? Check out [the demo app](demo)! Otherwise, continue reading.
+
+You can run the demo app from the root of the project by typing `npm run demo.ios.device` or `npm run demo.android`.
+
+<img src="https://raw.githubusercontent.com/EddyVerbruggen/nativescript-directions/master/media/directions-animated.gif" width="320px" height="570px"/>
+
+### Demo app (Angular)
+This plugin is part of the [plugin showcase app](https://github.com/EddyVerbruggen/nativescript-pluginshowcase/tree/master/app/mapping) I built using Angular.
 
 ## Future work
 * Perhaps add Android-specific options like opening the map in StreetView mode, or pre-defining the transportation type (walk/bike/car).

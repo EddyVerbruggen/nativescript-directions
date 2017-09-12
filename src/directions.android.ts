@@ -1,5 +1,5 @@
 import { DirectionsCommon, NavigateToOptions } from "./directions.common";
-import * as application from "application";
+import * as application from "tns-core-modules/application";
 
 // ignore TS error
 let com: any;
