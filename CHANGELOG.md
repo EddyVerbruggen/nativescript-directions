@@ -1,6 +1,13 @@
 # Change Log
 
-## [1.1.1](https://github.com/EddyVerbruggen/nativescript-directions/tree/1.1.0) (2017-09-12)
+## [1.1.2](https://github.com/EddyVerbruggen/nativescript-directions/tree/1.1.2) (2017-12-27)
+[Full Changelog](https://github.com/EddyVerbruggen/nativescript-directions/compare/1.1.1...1.1.2)
+
+**Fixed bugs:**
+
+- Problem with current location [\#14](https://github.com/EddyVerbruggen/nativescript-directions/issues/14)
+
+## [1.1.1](https://github.com/EddyVerbruggen/nativescript-directions/tree/1.1.1) (2017-09-12)
 [Full Changelog](https://github.com/EddyVerbruggen/nativescript-directions/compare/1.1.0...1.1.1)
 
 **Implemented enhancements:**

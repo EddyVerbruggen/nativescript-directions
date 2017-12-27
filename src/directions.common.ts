@@ -47,7 +47,7 @@ export interface NavigateToOptions {
 export class DirectionsCommon {
   static getFromToQuerystring(options: NavigateToOptions): string {
     let dest = undefined,
-        source = "current location",
+        source = null,
         qs = "?saddr=";
 
     if (options.from) {
@@ -57,7 +57,10 @@ export class DirectionsCommon {
         source = options.from.lat + "," + options.from.lng;
       }
     }
-    qs += encodeURIComponent(source);
+
+    if (source) {
+      qs += encodeURIComponent(source);
+    }
 
     if (!options.to) {
       throw new Error("Set 'to', please.");
