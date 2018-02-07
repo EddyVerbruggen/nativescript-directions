@@ -1,8 +1,8 @@
-import { DirectionsCommon, NavigateToOptions } from "./directions.common";
+import { DirectionsApi, DirectionsCommon, NavigateToOptions } from "./directions.common";
 import * as utils from "tns-core-modules/utils/utils";
 const isAppAvailable = require("nativescript-appavailability").availableSync;
 
-export class Directions extends DirectionsCommon {
+export class Directions extends DirectionsCommon implements DirectionsApi {
 
   public available(): Promise<any> {
     return new Promise((resolve, reject) => {
@@ -20,7 +20,6 @@ export class Directions extends DirectionsCommon {
           // url = `http://maps.google.com/maps?${fromToQs}+to:${encodeURIComponent("Weerdestein 144, Dordrecht, Netherlands")}`;
           utils.openUrl("comgooglemaps://" + fromToQs);
         } else if (options.ios && options.ios.allowGoogleMapsWeb && options.to instanceof Array && options.to.length > 1) {
-          // TODO see web doc if this doesn't work
           utils.openUrl("http://maps.google.com/maps" + fromToQs);
         } else {
           utils.openUrl("http://maps.apple.com/maps" + fromToQs);

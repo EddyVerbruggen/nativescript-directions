@@ -1,10 +1,11 @@
-import { DirectionsCommon, NavigateToOptions } from "./directions.common";
+import { DirectionsApi, DirectionsCommon, NavigateToOptions } from "./directions.common";
 import * as application from "tns-core-modules/application";
+import * as utils from "tns-core-modules/utils/utils";
 
 // ignore TS error
 let com: any;
 
-export class Directions extends DirectionsCommon {
+export class Directions extends DirectionsCommon implements DirectionsApi {
 
   private isPackageInstalled(): boolean {
     try {
@@ -29,18 +30,13 @@ export class Directions extends DirectionsCommon {
     return new Promise((resolve, reject) => {
 
       if (!this.isPackageInstalled()) {
-        // TODO could fall back to web..
+        // TODO fall back to web (see iOS impl)
         reject("Maps app not installed, use 'available' before using 'navigate'.");
         return;
       }
 
       try {
         const fromToQs = Directions.getFromToQuerystring(options);
-
-        options.ios = options.ios || {};
-        if (options.ios.preferGoogleMaps) {
-          // if Google maps is installed, use that, otherwise use Apple maps (which doesn't support waypoints.. so nav to the first destination if that's used)
-        }
 
         let intent = new android.content.Intent(
             android.content.Intent.ACTION_VIEW,

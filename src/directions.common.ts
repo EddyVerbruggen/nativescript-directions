@@ -44,6 +44,11 @@ export interface NavigateToOptions {
   };
 }
 
+export interface DirectionsApi {
+  available(): Promise<any>;
+  navigate(options: NavigateToOptions): Promise<any>;
+}
+
 export class DirectionsCommon {
   static getFromToQuerystring(options: NavigateToOptions): string {
     let dest = undefined,
