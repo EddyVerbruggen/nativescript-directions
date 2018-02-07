@@ -1,6 +1,5 @@
 import { DirectionsApi, DirectionsCommon, NavigateToOptions } from "./directions.common";
 import * as application from "tns-core-modules/application";
-import * as utils from "tns-core-modules/utils/utils";
 
 // ignore TS error
 let com: any;
