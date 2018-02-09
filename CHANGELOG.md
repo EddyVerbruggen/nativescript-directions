@@ -1,5 +1,12 @@
 # Change Log
 
+## [1.2.0](https://github.com/EddyVerbruggen/nativescript-directions/tree/1.2.0) (2018-02-09)
+[Full Changelog](https://github.com/EddyVerbruggen/nativescript-directions/compare/1.1.2...1.2.0)
+
+**Implemented enhancements:**
+
+- Fall back to web on Google, if Maps is not available [\#16](https://github.com/EddyVerbruggen/nativescript-directions/issues/16)
+
 ## [1.1.2](https://github.com/EddyVerbruggen/nativescript-directions/tree/1.1.2) (2017-12-27)
 [Full Changelog](https://github.com/EddyVerbruggen/nativescript-directions/compare/1.1.1...1.1.2)
 
