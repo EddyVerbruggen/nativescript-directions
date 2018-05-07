@@ -41,6 +41,9 @@ export interface NavigateToOptions {
      * Default false.
      */
     allowGoogleMapsWeb?: boolean;
+
+    preferYandexNavi? : boolean;
+    
   };
 }
 
