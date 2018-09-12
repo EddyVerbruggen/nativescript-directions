@@ -42,6 +42,8 @@ export interface NavigateToOptions {
      */
     allowGoogleMapsWeb?: boolean;
   };
+
+  type?: string;
 }
 
 export interface DirectionsApi {
@@ -84,6 +86,10 @@ export class DirectionsCommon {
         throw new Error("Either set 'address' or 'lat' and 'lng'.");
       }
       qs += (i === 0 ? "&daddr=" : "+to:") + encodeURIComponent(dest);
+    }
+
+    if (options.type) {
+      qs += '&directionsmode=' + options.type;
     }
 
     return qs;

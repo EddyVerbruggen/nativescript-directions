@@ -113,7 +113,8 @@ directions.navigate({
   ios: {
     preferGoogleMaps: true, // If the Google Maps app is installed, use that one instead of Apple Maps, because it supports waypoints. Default true.
     allowGoogleMapsWeb: true // If waypoints are passed in and Google Maps is not installed, you can either open Apple Maps and the first waypoint is used as the to-address (the rest is ignored), or you can open Google Maps on web so all waypoints are shown (set this property to true). Default false.
-  }
+  },
+  type: "walking" // its optional, but can be: driving, transit, bicycling or walking
 }).then(() => {
     console.log("Maps app launched.");
 }, error => {
