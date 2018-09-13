@@ -14,6 +14,8 @@ export interface AddressOptions {
   address?: string;
 }
 
+export type NavigateToOptionsType = "driving" | "transit" | "bicycling" | "walking";
+
 export interface NavigateToOptions {
   /**
    * If not set the current GPS location will be used.
@@ -43,7 +45,7 @@ export interface NavigateToOptions {
     allowGoogleMapsWeb?: boolean;
   };
 
-  type?: string;
+  type?: NavigateToOptionsType;
 }
 
 export interface DirectionsApi {
@@ -90,8 +92,18 @@ export class DirectionsCommon {
 
     if (options.type) {
       qs += '&directionsmode=' + options.type;
+      qs += '&dirflg=' + DirectionsCommon.getDirflgType(options.type);
     }
 
+    console.log(">> qs: " + qs);
+
     return qs;
+  }
+
+  static getDirflgType(type: NavigateToOptionsType): string {
+    if (type === "walking") return "w";
+    else if (type === "bicycling") return "b";
+    else if (type === "transit") return "r";
+    else return "d";
   }
 }

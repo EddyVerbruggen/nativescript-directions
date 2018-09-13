@@ -3,9 +3,6 @@
     "id": "org.nativescript.directions",
     "tns-ios": {
       "version": "3.4.0"
-    },
-    "tns-android": {
-      "version": "3.4.1"
     }
   },
   "dependencies": {

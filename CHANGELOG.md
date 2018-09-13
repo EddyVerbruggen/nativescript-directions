@@ -1,5 +1,12 @@
 # Change Log
 
+## [1.3.0](https://github.com/EddyVerbruggen/nativescript-directions/tree/1.3.0) (2018-09-13)
+[Full Changelog](https://github.com/EddyVerbruggen/nativescript-directions/compare/1.2.0...1.3.0)
+
+**Implemented enhancements:**
+
+- added directionmode type to the url scheme [\#23](https://github.com/EddyVerbruggen/nativescript-directions/pull/23)
+
 ## [1.2.0](https://github.com/EddyVerbruggen/nativescript-directions/tree/1.2.0) (2018-02-09)
 [Full Changelog](https://github.com/EddyVerbruggen/nativescript-directions/compare/1.1.2...1.2.0)
 

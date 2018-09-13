@@ -22,7 +22,8 @@ export class HelloWorldModel extends Observable {
     this.directions.navigate({
       to: {
         address: "Hof der Kolommen 34, Amersfoort, Netherlands"
-      }
+      },
+      type: "transit"
     }).then(() => {
       console.log("Current location to address directions launched!");
     }, (err) => {
@@ -35,6 +36,7 @@ export class HelloWorldModel extends Observable {
       from: {
         address: "Hof der Kolommen 34, Amersfoort, Netherlands"
       },
+      type: "walking",
       to: [
         {
           address: "Middenstraat 21, Loppersum, Netherlands"
@@ -61,8 +63,10 @@ export class HelloWorldModel extends Observable {
         lat: 52.215987,
         lng: 5.282764
       }],
+      type: "walking",
       ios: {
-        preferGoogleMaps: false
+        allowGoogleMapsWeb: true,
+        preferGoogleMaps: true
       }
     }).then(() => {
       console.log("Address to coord directions launched!");
