@@ -8,7 +8,7 @@
       <Button text="from coord to coord" tap="{{ doCoordinateToCoordinate }}" class="button" />
       <Button text="from address to address to address" tap="{{ doAddressToAddressToAddress }}" class="button" />
       <ios>
-        <Label text="This one prefers Apple Maps on iOS:" textWrap="true" class="hint"/>
+        <Label text="This one prefers Google Maps on iOS:" textWrap="true" class="hint"/>
       </ios>
       <Button text="from address to coord" tap="{{ doAddressToCoordinate }}" class="button" />
     </StackLayout>
