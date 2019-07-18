@@ -8,7 +8,7 @@
 android {
     defaultConfig {
         generatedDensities = []
-        applicationId = "org.nativescript.directions"
+        applicationId = "org.nativescript.plugindemo.directions"
     }
     aaptOptions {
         additionalParameters "--no-version-vectors"

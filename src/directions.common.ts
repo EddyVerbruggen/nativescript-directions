@@ -49,8 +49,8 @@ export interface NavigateToOptions {
 }
 
 export interface DirectionsApi {
-  available(): Promise<any>;
-  navigate(options: NavigateToOptions): Promise<any>;
+  available(): Promise<boolean>;
+  navigate(options: NavigateToOptions): Promise<void>;
 }
 
 export class DirectionsCommon {

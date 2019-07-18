@@ -19,14 +19,14 @@ export class Directions extends DirectionsCommon implements DirectionsApi {
     return true;
   }
 
-  public available(): Promise<any> {
-    return new Promise((resolve, reject) => {
+  public available(): Promise<boolean> {
+    return new Promise<boolean>((resolve, reject) => {
       resolve(this.isPackageInstalled());
     });
   }
 
-  public navigate(options: NavigateToOptions): Promise<any> {
-    return new Promise((resolve, reject) => {
+  public navigate(options: NavigateToOptions): Promise<void> {
+    return new Promise<void>((resolve, reject) => {
       try {
         const fromToQs = Directions.getFromToQuerystring(options);
 
@@ -38,7 +38,7 @@ export class Directions extends DirectionsCommon implements DirectionsApi {
               android.content.Intent.ACTION_VIEW,
               android.net.Uri.parse("http://maps.google.com/maps" + fromToQs));
 
-          application.android.currentContext.startActivityForResult(intent, 0);
+          (application.android.foregroundActivity || application.android.startActivity).startActivityForResult(intent, 0);
         }
 
         resolve();
