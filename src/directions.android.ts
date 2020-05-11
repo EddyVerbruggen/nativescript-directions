@@ -9,8 +9,8 @@ export class Directions extends DirectionsCommon implements DirectionsApi {
   private isPackageInstalled(): boolean {
     try {
       let intent = new android.content.Intent(
-          android.content.Intent.ACTION_VIEW,
-          android.net.Uri.parse("http://maps.google.com/maps"));
+        android.content.Intent.ACTION_VIEW,
+        android.net.Uri.parse("http://maps.google.com/maps"));
 
       let pm = com.tns.NativeScriptApplication.getInstance().getPackageManager();
       return intent.resolveActivity(pm) != null;
@@ -35,8 +35,12 @@ export class Directions extends DirectionsCommon implements DirectionsApi {
           utils.openUrl("http://maps.google.com/maps" + fromToQs);
         } else {
           const intent = new android.content.Intent(
-              android.content.Intent.ACTION_VIEW,
-              android.net.Uri.parse("http://maps.google.com/maps" + fromToQs));
+            android.content.Intent.ACTION_VIEW,
+            android.net.Uri.parse("http://maps.google.com/maps" + fromToQs));
+
+          if (!options.android || options.android.newTask !== false) {
+            intent.addFlags(android.content.Intent.FLAG_ACTIVITY_NEW_TASK);
+          }
 
           (application.android.foregroundActivity || application.android.startActivity).startActivityForResult(intent, 0);
         }

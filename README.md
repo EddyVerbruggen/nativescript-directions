@@ -85,7 +85,7 @@ directions.navigate({
   to: { // either pass in a single object or an Array (see the TypeScript example below)
     address: "Hof der Kolommen 34, Amersfoort, Netherlands"
   }
-  // for iOS-specific options, see the TypeScript example below.
+  // for platform-specific options, see the TypeScript example below.
 }).then(
   function() {
     console.log("Maps app launched.");
@@ -113,6 +113,9 @@ directions.navigate({
   ios: {
     preferGoogleMaps: true, // If the Google Maps app is installed, use that one instead of Apple Maps, because it supports waypoints. Default true.
     allowGoogleMapsWeb: true // If waypoints are passed in and Google Maps is not installed, you can either open Apple Maps and the first waypoint is used as the to-address (the rest is ignored), or you can open Google Maps on web so all waypoints are shown (set this property to true). Default false.
+  },
+  android: {
+    newTask: true // Start as new task. This means it will start a new history stack instead of using the current app. Default true.
   }
 }).then(() => {
     console.log("Maps app launched.");
