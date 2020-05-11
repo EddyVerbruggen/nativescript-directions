@@ -45,6 +45,15 @@ export interface NavigateToOptions {
     allowGoogleMapsWeb?: boolean;
   };
 
+  android?: {
+    /**
+     * Start as new task. This means it will start a new history stack instead of using the current app.
+     *
+     * Default true.
+     */
+    newTask?: boolean;
+  };
+
   type?: NavigateToOptionsType;
 }
 
@@ -56,8 +65,8 @@ export interface DirectionsApi {
 export class DirectionsCommon {
   static getFromToQuerystring(options: NavigateToOptions): string {
     let dest = undefined,
-        source = null,
-        qs = "?saddr=";
+      source = null,
+      qs = "?saddr=";
 
     if (options.from) {
       if (options.from.address) {
