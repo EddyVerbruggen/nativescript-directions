@@ -1,6 +1,5 @@
 import { DirectionsApi, DirectionsCommon, NavigateToOptions } from "./directions.common";
-import * as application from "tns-core-modules/application";
-import * as utils from "tns-core-modules/utils/utils";
+import { Application, Utils } from "@nativescript/core";
 
 let com: any;
 
@@ -32,7 +31,7 @@ export class Directions extends DirectionsCommon implements DirectionsApi {
 
         if (!this.isPackageInstalled()) {
           // fall back to web
-          utils.openUrl("http://maps.google.com/maps" + fromToQs);
+          Utils.openUrl("http://maps.google.com/maps" + fromToQs);
         } else {
           const intent = new android.content.Intent(
             android.content.Intent.ACTION_VIEW,
@@ -42,7 +41,7 @@ export class Directions extends DirectionsCommon implements DirectionsApi {
             intent.addFlags(android.content.Intent.FLAG_ACTIVITY_NEW_TASK);
           }
 
-          (application.android.foregroundActivity || application.android.startActivity).startActivityForResult(intent, 0);
+          (Application.android.foregroundActivity || Application.android.startActivity).startActivityForResult(intent, 0);
         }
 
         resolve();

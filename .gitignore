@@ -18,3 +18,4 @@ node_modules
 demo/hooks/
 publish/package/
 report/
+package-lock.json
