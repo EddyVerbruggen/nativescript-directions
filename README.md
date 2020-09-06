@@ -12,6 +12,8 @@
 [twitter-image]:https://img.shields.io/twitter/follow/eddyverbruggen.svg?style=social&label=Follow%20me
 [twitter-url]:https://twitter.com/eddyverbruggen
 
+> ⚠️ Looking for NativeScript 7 compatibilty? Go to [the NativeScript/plugins repo](https://github.com/NativeScript/plugins/tree/master/packages/directions).
+
 ## Installation
 From the command prompt go to your app's root folder and execute:
 
