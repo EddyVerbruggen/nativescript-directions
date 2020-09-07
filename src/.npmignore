@@ -3,3 +3,4 @@
 !*.d.ts
 tsconfig.json
 references.d.ts
+*.tgz
