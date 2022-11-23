@@ -19,7 +19,7 @@
     "babel-types": "6.26.0",
     "babylon": "6.18.0",
     "jasmine-core": "^2.8.0",
-    "karma": "4.1.0",
+    "karma": "6.4.1",
     "karma-jasmine": "2.0.1",
     "karma-nativescript-launcher": "^0.4.0",
     "lazy": "1.0.11",
